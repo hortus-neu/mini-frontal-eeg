@@ -205,3 +205,48 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+# -----------------------------------------------------------------
+# MATLAB / Simulink
+# -----------------------------------------------------------------
+
+# Autosave and backup files
+*.asv
+*.autosave
+
+# Figures and Simulink model autosave
+*.fig.autosave
+*.slx.autosave
+*.mdl.autosave
+
+# Simulink cache and code generation folders
+slprj/
+sccprj/
+codegen/
+*_ert_rtw/
+*_slprj/
+*_raccel/
+
+# Compiled MEX binaries (platform-dependent)
+*.mex*
+*.mexw64
+*.mexmaci64
+*.mexa64
+
+# MATLAB preferences / history
+matlabprefs.mat
+.history.m
+*.prj # MATLAB project files (optional, keep if you want version control)
+
+# Reports and generated docs
+*.html
+*.pdf
+*.log
+
+# Temp files
+*.tmp
+*.bak
+
+# MATLAB live scripts checkpoints
+*.mlx.autosave
