@@ -5,11 +5,11 @@ clear; clc;
 [ALLEEG, EEG, CURRENTSET, ALLCOM] = eeglab;
 
 % make directory for preprocessed clean data
-repoRoot = pwd;
-
-cleanDir = fullfile(repoRoot, 'data', 'cleaned')
-
-if ~exist(cleanDir, 'dir'); mkdir(cleanDir);end;
+% repo root = the parent folder of this script's folder
+thisFileDir = fileparts(mfilename('fullpath'));    % .../repo/scripts
+repoRoot    = fileparts(thisFileDir);              % .../repo
+cleanDir    = fullfile(repoRoot, 'data', 'cleaned');
+if ~exist(cleanDir, 'dir'); mkdir(cleanDir); end
 
 % load data
 %% This is loading sample data.
