@@ -1,11 +1,10 @@
 function out = psd_bandpower(x, fs, bands, welchCfg)
 % x : single channel input [1xN] or [Nx1]
-% bands: eeg band which you wanna analyze [lowerbond, upperbond]
+% bands: eeg band which you wanna analyze [lower bound, upper bound]
 % welchCfg: structure for Welch
 % bandpower = ∑(PSD(f) × Δf),  f 在 [f_low, f_high]
 
      x = x(:);
-     if ~isfield(welchCfg,'winSec'),  welchCfg.winSec = 2;   end
      if ~isfield(welchCfg,'winSec'),  welchCfg.winSec = 2;   end
      if ~isfield(welchCfg,'overlap'), welchCfg.overlap = 0.5; end
      if ~isfield(welchCfg,'nfft'),    welchCfg.nfft = [];     end
