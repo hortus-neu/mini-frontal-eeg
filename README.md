@@ -124,6 +124,39 @@ flowchart TD
 * **Time-frequency maps**: dynamic changes in alpha/theta activity across conditions (e.g., eyes-open vs eyes-closed).
 
 ---
+## Future Work
+
+This mini project currently demonstrates a basic pipeline for frontal EEG analysis
+(preprocessing, spectral features, FAA, and time–frequency visualization).
+Future directions may include:
+
+- **Larger Datasets**  
+  Apply the pipeline to more participants or publicly available EEG datasets
+  (e.g., ADHD vs. control groups) to validate robustness.
+
+- **Condition Comparisons**  
+  Extend beyond demo data to analyze task paradigms such as 0-back vs. 2-back,
+  or eyes-open vs. eyes-closed, to explore task-related modulation of frontal alpha.
+
+- **Enhanced Features**  
+  Incorporate additional EEG markers (theta/beta ratio, connectivity metrics)
+  alongside FAA to capture broader aspects of frontal function.
+
+- **Automated Artifact Rejection**  
+  Replace manual ICA component rejection with ICLabel or machine learning-based
+  classification to improve reproducibility.
+
+- **Clinical Relevance**  
+  Investigate whether abnormal FAA or elevated frontal alpha can serve as
+  biomarkers for ADHD assessment and monitor the effects of interventions
+  (neurofeedback, medication, cognitive training).
+
+- **Integration with Python**  
+  Re-implement parts of the pipeline using MNE-Python for better compatibility
+  with modern machine learning workflows.
+
+
+---
 
 ## License
 Academic / research use only.
