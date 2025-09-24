@@ -104,6 +104,18 @@ Recommended: run on macOS/Linux for stable EEGLAB support.
    >> timefreq
    ```
 ---
+## Pipeline
+```mermaid
+flowchart TD
+    A[Raw EEG] --> B["Preprocessing\n(Filter, ICA)"]
+    B --> C[Cleaned EEG]
+    C --> D["Frequency Analysis\n(PSD, FAA)"]
+    D --> E["Time-Frequency\n(newtimef)"]
+    E --> F[Results]
+
+```
+
+---
 
 ## Results
 
