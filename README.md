@@ -74,12 +74,14 @@ Recommended: run on macOS/Linux for stable EEGLAB support.
 ## How to Run
 
 1. **Clone the repository**  
-   ```bash
-   git clone https://github.com/your-username/mini-frontal-eeg.git
-   cd mini-frontal-eeg
    ```
-
+   git clone https://github.com/hortus-neu/mini-frontal-eeg.git
+   cd('/Users/hetao/Projects/mini-frontal-eeg')
+   ```
 2. **Open MATLAB** and add `scripts/` to the path.
+    ```
+    addpath(genpath(pwd))
+    ```
 
 3. **Preprocessing**
     * Performs bandpass filter (1–40 Hz), notch filter, average reference, ICA artifact removal.
@@ -93,7 +95,7 @@ Recommended: run on macOS/Linux for stable EEGLAB support.
    * Saves plots into `figs/psd.png` and `figs/faa.png`.
 
    ```matlab
-   >> psd_bandpower
+   >> frequency_domain_analysis
    ```
 
 5. **Time-frequency analysis**

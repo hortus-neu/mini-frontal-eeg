@@ -45,7 +45,7 @@ fprintf('Loading: %s\n', latestSet);
 EEG = pop_loadset('filename', files(ix(1)).name, 'filepath', dataDir);
 
 %% B. Parameter
-labels = {'F3','F4','Fz','AFz'};
+labels = {'F3','F4','Fz'};
 bands.alpha = [8 12];
 bands.theta = [4 7];
 
