@@ -121,9 +121,69 @@ flowchart TD
 
 ## Results
 
-* **PSD / Alpha Power**: clear visualization of frontal alpha rhythms.
-* **FAA**: left vs right prefrontal asymmetry plot.
-* **Time-frequency maps**: dynamic changes in alpha/theta activity across conditions (e.g., eyes-open vs eyes-closed).
+### 1. Power Spectral Density (PSD)
+
+**Figure:**
+![PSD](figs/psd.png)
+
+**Description:** Shows the overall spectral distribution of frontal channels (F3, F4, Fz).
+
+**Observation:**
+
+* Clear peaks in the **alpha band (8–12 Hz)** and **theta band (4–7 Hz)**.
+* Pattern is consistent with typical EEG spectral profiles.
+
+
+### 2. Alpha/Theta Band Power
+**Figure:**
+![Alpha/Theta Power](figs/psd_alpha_theta.png)
+
+**Description:** Bar plot comparing alpha and theta power across F3, F4, and Fz channels.
+
+**Observation:**
+
+* Alpha power is **dominant** across all channels.
+* Theta power is lower but still visible, especially at **midline (Fz)**.
+* This alpha–theta balance is often studied in relation to **attention and working memory**.
+
+
+### 3. Frontal Alpha Asymmetry (FAA)
+
+**Figure:**
+![FAA](figs/faa.png)
+
+**Definition:** FAA = log10(Pα\_F4) – log10(Pα\_F3).
+
+**Result:** FAA ≈ **–0.05**.
+
+**Interpretation:**
+
+* Slight **left-frontal dominance** (lower alpha on F3 than F4).
+* Often linked to **approach motivation** and **positive affect**.
+
+
+### 4. Time-Frequency Analysis at Fz
+
+**Figure:**
+![Time-Frequency at Fz](figs/timefreq_Fz.png)
+
+**Description:** ERSP (Event-Related Spectral Perturbation) map for the Fz channel (2–40 Hz).
+
+**Observation:**
+
+* Strong, sustained **broadband activity** is visible (mostly positive power relative to baseline).
+* Because baseline was set to **NaN** (whole trial), much of the map shows enhancement across frequencies.
+* Next step: use a **pre-stimulus baseline window** (e.g., –200 to 0 ms) for clearer task-related effects.
+
+👉 Together, these results confirm that the pipeline successfully extracts:
+
+* **Spectral features** (PSD, alpha/theta)
+* **Asymmetry metrics** (FAA)
+* **Time-frequency dynamics** (ERSP at Fz)
+
+This demonstrates the feasibility of using this **mini frontal EEG workflow** for cognitive neuroscience applications.
+
+
 
 ---
 ## Future Work
