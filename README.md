@@ -103,7 +103,7 @@ Recommended: run on macOS/Linux for stable EEGLAB support.
    * Saves figure into `figs/timefreq_Fz.png`.
 
    ```matlab
-   >> timefreq
+   >> timefreq_analysis
    ```
 ---
 ## Pipeline

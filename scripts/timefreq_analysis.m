@@ -94,17 +94,13 @@ figure;
 %             → [3 0.5] means 3 cycles at the lowest frequency and variable cycles at higher frequencies (Morlet wavelet).
 %             → 0 means short-time Fourier transform (STFT).
 
-newtimef(EEG.data(chanFz,:,:), EEG.pnts, ...
+newtimef(EEG.data(chanFz,:), EEG.pnts, ...
          [EEG.xmin EEG.xmax]*1000, EEG.srate, [3 0.5], ...
-         'baseline', NaN, ...       % Baseline correction method.
-                                    % NaN = use the entire trial as baseline.
-                                    % Or you can set a time window, e.g. [-200 0].
-         'freqs', [2 40], ...       % Frequency range to display (Hz).
-                                    % Here: from 2 Hz to 40 Hz.
-         'plotersp', 'on', ...      % Plot ERSP (Event-Related Spectral Perturbation).
-                                    % This shows power changes over time-frequency.
-         'plotitc', 'off');         % Do not plot ITC (Inter-Trial Coherence).
-                                    % ITC measures phase-locking across trials.
+         'baseline', NaN, ...
+         'freqs', [2 40], ...
+         'plotersp', 'on', ...
+         'plotitc', 'off');
+
 
 title('Time-Frequency at Fz');
 % Adds a title to the figure.
